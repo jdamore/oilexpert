@@ -1,0 +1,15 @@
+
+<table>
+  <% if list != nil %>
+      <% list.each do |group| %>
+          <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+            <td>
+              <dl>
+                <dd><%= group.name %></dd>
+              </dl>
+            </td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>
+

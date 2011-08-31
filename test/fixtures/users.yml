@@ -1,0 +1,7 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+existing:
+  name: existing
+  email: existing@user.com
+  hashed_password: 77a0d943cdbace52716a9ef9fae12e45e2788d39 # test
+  salt: 1000

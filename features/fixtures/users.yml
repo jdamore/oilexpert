@@ -1,0 +1,19 @@
+:local:
+  :unique:
+    :username: :unique
+    :password: cucumber
+    :email: cucumber@test.com
+  :invalid_email:
+    :username: :unique
+    :password: cucumber
+    :email: invalid_email
+  :existing:
+    :username: existing
+    :email: cucumber@test.com
+    :password: test
+    :hashed_password: 77a0d943cdbace52716a9ef9fae12e45e2788d39 # test
+    :salt: 1000
+  :blank:
+    :username: ''
+    :password: ''
+    :email: ''

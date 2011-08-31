@@ -1,0 +1,89 @@
+.x-div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eeeeee;
+    background-color: #efefef;
+
+}
+
+.x-div-title {
+    background-color: orange;
+    color: white;
+    font-size: 14pt;
+    font-family: arial;
+    height: 20px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: orange;
+}
+
+.x-site-title {
+    background-color: white;
+    color: orange;
+    font-size: 30pt;
+    font-decoration: italic;
+    font-family: arial;
+    height: 20;
+    border-style: solid;
+    border-width: 0px;
+    border-color: white;
+    padding: 12px;
+}
+
+.x-user {
+    position: relative;
+    width: 250px;
+    top: 30px;
+    left: 780px;
+}
+
+.x-user-groups {
+    position: relative;
+    width: 250px;
+    top: 40px;
+    left: 780px;
+}
+
+.x-all-groups {
+    position: absolute;
+    width: 250px;
+    top: 83px;
+    left: 20px;
+}
+
+.x-discussions {
+    position: absolute;
+    width: 500px;
+    top: 83px;
+    left: 280px;
+}
+
+.x-link {
+    text-decoration: underline;
+    color: blue;
+    border: 0;
+    background: transparent;
+}
+
+.x-button-on {
+    background: yellow;
+}
+
+x-errors {
+  border: 2px solid orange;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #ffcc00;
+}
+
+.x-errors {
+  color: red;
+  font-size: 12px;
+  list-style: square;
+}
+
+.x-actions {
+  margin-bottom: 10px;
+  text-align: right;
+}

@@ -1,0 +1,110 @@
+<table width='100%'><tr class='x-div-title'><td class='x-div-title'>Register</td></tr></table>
+<% @user = User.new if @user==nil %>
+<%= form_for @user, :html => { :method => :post, :class => "register", :id => "register" }, :remote => 'true', :url => { :controller => 'users', :action => 'new' } do |f| %>
+
+    <div class="field">
+      <table width="90%" border="0">
+        <tr valign="top">
+          <td>
+            <%= f.label :name %>*
+          </td>
+          <td align="right">
+            <div id="name-errors" class="x-div x-errors">
+              <% if @user.errors.any? %>
+                  <% @user.errors[:name].each_with_index do |msg, index| %>
+                      <% if index > 0 %><br><% end %>
+                      <%= msg %>
+                  <% end %>
+              <% end %>
+            </div>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td colspan="2">
+            <%= f.text_field :name %>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="field">
+      <table width="90%" border="0">
+        <tr valign="top">
+          <td>
+            <%= f.label :email %>*
+          </td>
+          <td align="right">
+            <div id="email-errors" class="x-div x-errors">
+              <% if @user.errors.any? %>
+                  <% @user.errors[:email].each_with_index do |msg, index| %>
+                      <% if index > 0 %><br><% end %>
+                      <%= msg %>
+                  <% end %>
+              <% end %>
+            </div>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td colspan="2">
+            <%= f.email_field :email %>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="field">
+      <table width="90%" border="0">
+        <tr valign="top">
+          <td>
+            <%= f.label :password %>*
+          </td>
+          <td align="right">
+            <div id="password-errors" class="x-div x-errors">
+              <% if @user.errors.any? %>
+                  <% @user.errors[:password].each_with_index do |msg, index| %>
+                      <% if index > 0 %><br><% end %>
+                      <%= msg %>
+                  <% end %>
+              <% end %>
+            </div>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td colspan="2">
+            <%= f.password_field :password %>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="field">
+      <table width="90%" border="0">
+        <tr valign="top">
+          <td>
+            <%= f.label :password_confirmation %>*
+          </td>
+          <td align="right">
+            <div id="password-confirmation-errors" class="x-div x-errors">
+              <% if @user.errors.any? %>
+                  <% @user.errors[:password_confirmation].each_with_index do |msg, index| %>
+                      <% if index > 0 %><br><% end %>
+                      <%= msg %>
+                  <% end %>
+              <% end %>
+            </div>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td colspan="2">
+            <%= f.password_field :password_confirmation %>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  <div class="x-actions">
+    <%= f.submit :Register, :name => 'register', :id => 'register' %>
+    <a id="login" class="x-link" onclick="$.ajax({type: 'POST', url: '/users/login', data: {mode:'show'}});">Login</a>
+  </div>
+
+<% end %>

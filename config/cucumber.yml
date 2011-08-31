@@ -1,0 +1,4 @@
+<% common = "-r features --tags ~@ignore --color --format pretty --format html -o results.html --format junit -o junit" %>
+default: ENVIRONMENT=local WEB_DRIVER=firefox --tags ~@wip <%= common %>
+local: ENVIRONMENT=local WEB_DRIVER=firefox --tags ~@wip <%= common %>
+local_wip: ENVIRONMENT=local WEB_DRIVER=firefox --tags @wip <%= common %>

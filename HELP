@@ -1,0 +1,41 @@
+db & Migration
+--------------
+
+rake db:drop                                    => Drop all tables
+rake db:migrate                                 => Create table as per migration script
+rake db:rollback                                => Rollback last migration
+rails generate migration <migration_file_name>  => Generate migration script
+rake db:seed                                    => Execute db/seed.rb
+rake db:reset                                   => Recreated dB with all migrations
+
+Code Generation
+---------------
+
+rails new <my_rails_app>                        => Generates new Rails app under folder <my_rails_app>/
+
+rails generate controller <my_cont>             => Generates <my_cont>_controller.rb abd Tests (can be used with several arguments)
+
+rails generate scaffold Product \               => Generates Model/View/Controller/Helper/Migration/Tests for Product
+title:string \
+description:text \
+image_url:string price:decimal
+
+Info
+----
+
+rake routes                                     => Info of the routes generated/used
+
+Testing
+-------
+
+rake test                                       => Runs all unit, functional and integration tests.
+rake test:units                                 => Runs all the unit tests.
+rake test:functionals                           => Runs all the functional tests.
+rake test:integration                           => Runs all the integration tests.
+
+Server
+------
+
+rails server
+
+

@@ -1,0 +1,23 @@
+<head>
+</head>
+
+<body>
+
+<table width=1050px><tr class='x-site-title'><td class='x-site-title'><%= app_title %></td></tr></table>
+
+<div id="all-groups" class="x-div x-all-groups"></div>
+
+<div id="user" class="x-div x-user"></div>
+
+<div id="user-groups" class="x-div x-user-groups"></div>
+
+
+
+
+</body>
+
+
+  <script>
+      $("#user").ready(function(){$.ajax({type:'GET',url:"/users/<%=@user.id%>"});});
+      $("#all-groups").ready(function(){$.ajax({type:'GET',url:"/groups"});});
+  </script>

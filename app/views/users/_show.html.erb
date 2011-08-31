@@ -1,0 +1,11 @@
+<%= form_for @user, :html => { :method => :post, :class => "user", :id => "user" }, :remote => 'true', :method => 'get', :url => "users/logout" do |f| %>
+    <table id='welcome' width='100%'>
+      <tr class='x-div-title'>
+        <td class='x-div-title'>Welcome <%= @user.name %>
+        </td>
+      </tr>
+    </table>
+    <div class="x-actions">
+      <%= f.submit :Logout, :name => 'logout', :id => 'logout', :class => 'x-button'  %>
+    </div>
+<% end %>

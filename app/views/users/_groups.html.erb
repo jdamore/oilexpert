@@ -1,0 +1,5 @@
+<table width='100%'><tr class='x-div-title'><td class='x-div-title'>My Groups</td></tr></table>
+
+<% if @user != nil %>
+<%= render :partial => 'groups/list', :locals => { :list => @user.groups } %>
+<% end %>
