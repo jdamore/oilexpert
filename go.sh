@@ -2,7 +2,7 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 rvm rvmrc trust
-cd ../oilexpert # hack to load RVMRC
+#cd ../oilexpert # hack to load RVMRC
 #rvm use 1.9.2
 #set -e
 gem install bundler --no-rdoc --no-ri
@@ -17,7 +17,8 @@ if [ -d "junit" ]; then
     rm -r screenshots
 fi
 RAILS_ENV=test
+rake db:migrate
 rake test:units
 rake test:functionals
-exec rails server
-cucumber
+#exec rails server
+#cucumber
