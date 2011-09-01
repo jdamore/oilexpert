@@ -2,9 +2,7 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 rvm rvmrc trust
-cd ..
 pwd
-
 cd oilexpert # hack to load RVMRC
 #rvm use 1.9.2
 #set -e
