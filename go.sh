@@ -2,7 +2,10 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 rvm rvmrc trust
-#cd ../oilexpert # hack to load RVMRC
+cd ..
+pwd
+
+cd oilexpert # hack to load RVMRC
 #rvm use 1.9.2
 #set -e
 gem install bundler --no-rdoc --no-ri
