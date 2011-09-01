@@ -1,6 +1,5 @@
 #! /usr/bin/env bash
 
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 rvm rvmrc trust
 cd ../oilexpert # hack to load RVMRC
